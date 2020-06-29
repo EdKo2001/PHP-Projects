@@ -22,8 +22,8 @@
             while($row = $sql->fetch_assoc()) {
                 echo 
                 '<li>
-                <b>'.$row['task'].'</b>
-                <a href="remove.php?id='.$row['id'].'"><button class="remove">REMOVE</button></a>
+                    <b>'.$row['task'].'</b>
+                    <a href="remove.php?id='.$row['id'].'"><button class="remove">REMOVE</button></a>
                 </li>'
                 ;
             }
