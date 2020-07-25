@@ -1,14 +1,19 @@
 <?php
 require_once('app/database/cofingBD.php');
+if (isset($_GET['topic'])) {
+    $topic = $_GET['topic'];
+    $sql = $conn->query("SELECT * FROM posts WHERE topic='$topic'");
+}
 ?>
+
 <div class="page-content">
-  <h1 class="recent-posts-title">News</h1>
-  <?php
-  $sql = $conn->query("SELECT* FROM posts WHERE published='1' ORDER BY id DESC");
-  if ($sql->num_rows > 0) {
-    while ($row = $sql->fetch_assoc()) {
-      echo
-        ' <div class="post clearfix">
+    <h1 class="recent-posts-title">News</h1>
+    <?php
+
+    if ($sql->num_rows > 0) {
+        while ($row = $sql->fetch_assoc()) {
+            echo
+                ' <div class="post clearfix">
                     <img src="assets/img/' . $row['preview'] . '" class="post-image" alt="">
                     <div class="post-content">
           
@@ -23,7 +28,8 @@ require_once('app/database/cofingBD.php');
                       <a href="single.php?post=' . $row['id'] . '" class="read-more">Read More</a>
                     </div>
                   </div>';
+        }
     }
-  }
-  ?>
+
+    ?>
 </div>

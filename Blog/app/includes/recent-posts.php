@@ -12,17 +12,17 @@ require_once('app/database/cofingBD.php');
                     <img src="assets/img/'.$row['preview'].'" class="post-image" alt="">
                     <div class="post-content">
           
-                      <h2 class="post-title"><a href="signle.php='.$row['id'].'">'.$row['title'].'</a></h2>
+                      <h2 class="post-title"><a href="signle.php?post='.$row['id'].'">'.$row['title'].'</a></h2>
           
                       <div class="post-info">
                         <i class="fa fa-user-o"></i> '.$row['author'].'
-                        <i class="fa fa-calendar"></i> ' . $row['created_at'] . '
+                        <i class="fa fa-calendar"></i> '.date('F j, Y' , strtotime($row['created_at']) ).'
                             <i class="fa fa-rss" aria-hidden="true"></i> ' . $row['topic'] . '
                       </div>
                       <p class="post-body">
                       '.$row['description'].'
                       </p>
-                      <a href="'.$row['id'].'" class="read-more">Read More</a>
+                      <a href="single.php?post='.$row['id'].'" class="read-more">Read More</a>
                     </div>
                   </div>';
         }

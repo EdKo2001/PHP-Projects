@@ -407,6 +407,8 @@ header nav ul .userinfo i.fa-chevron-down {
   line-height: 1.7em;
   font-size: 1.03em;
   color: #444;
+  height: 120px;
+  overflow: hidden;
 }
 
 .content .page-content .post .post-image {
@@ -604,8 +606,14 @@ header nav ul .userinfo i.fa-chevron-down {
     background: #0E94A0;
   }
 }
+i {
+  margin-left: 20px;
+}
 
-@media only screen and (max-width: 974px) {
+i:nth-child(1) {
+  margin-left: 0;
+}
+@media(max-width: 974px) {
   /* CONTENT */
   .content {
     width: 100%;
@@ -622,7 +630,7 @@ header nav ul .userinfo i.fa-chevron-down {
   }
 }
 
-@media only screen and (max-width: 790px) {
+@media(max-width: 790px) {
   .content {
     margin: 40px auto 50px;
   }
@@ -657,7 +665,13 @@ header nav ul .userinfo i.fa-chevron-down {
   }
 }
 
-@media only screen and (max-width: 560px) {
+@media(max-width: 560px) {
+  .page-wrapper .posts-slider {
+    position: unset;
+  }
+  .page-wrapper .posts-slider .next, .page-wrapper .posts-slider .prev {
+    top: 55%;
+  }
   .footer {
     padding: 20px;
     padding-bottom: 60px;
@@ -686,7 +700,7 @@ header nav ul .userinfo i.fa-chevron-down {
     right: 10px;
   }
   .page-wrapper .posts-slider .prev {
-    left: 10px;
+    left: -7px;
   }
   .auth-content {
     width: 80%;

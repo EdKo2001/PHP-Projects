@@ -112,7 +112,7 @@ function unpublished()
     echo '
             <tr>
                 <td>
-                    No Posts
+                    No Drafts
                 </td>
                 <td></td>
                 <td></td>

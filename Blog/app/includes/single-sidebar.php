@@ -1,4 +1,4 @@
-<div class="sidebar">
+<div class="sidebar single">
     <!-- Search -->
     <div class="search-div">
         <form action="app/includes/search.php" method="post">
@@ -7,9 +7,8 @@
         </form>
     </div>
     <!-- // Search -->
-
     <!-- topics -->
-    <?php include('topics.php') ?>
+    <?php include('app/includes/topics.php') ?>
     <!-- // topics -->
 
 </div>

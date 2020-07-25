@@ -15,12 +15,14 @@ require_once('app/database/cofingBD.php');
                 echo
                     '<div class="post">
                             <div class="inner-post">
+                            <a href="single.php?post=' . $row['id'] . '">
                             <img src="assets/img/' . $row['preview'] . '" alt="" style="height: 200px; width: 100%; border-top-left-radius: 5px; border-top-right-radius: 5px;">
+                            </a>
                 <div class="post-info">
-                    <h4><a href="single.php=' . $row['id'] . '">' . $row['title'] . '</a></h3>
+                    <h4><a href="single.php?post=' . $row['id'] . '">' . $row['title'] . '</a></h3>
                         <div>
                             <i class="fa fa-user-o"></i> ' . $row['author'] . '
-                            <i class="fa fa-calendar"></i> ' . $row['created_at'] . '
+                            <i class="fa fa-calendar"></i> ' . date('F j, Y', strtotime($row['created_at'])) . '
                             <i class="fa fa-rss" aria-hidden="true"></i> ' . $row['topic'] . '
                         </div>
                 </div>

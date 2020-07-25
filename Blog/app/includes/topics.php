@@ -10,7 +10,7 @@ require_once('app/database/cofingBD.php');
         if ($sql->num_rows > 0) {
             while ($row = $sql->fetch_assoc()) {
                 echo
-                    '<a href="">
+                    '<a href="topics.php?topic='.$row['name'].'">
                         <li>' . $row['name'] . '</li>
                     </a>';
             }

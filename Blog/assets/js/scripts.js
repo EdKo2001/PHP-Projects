@@ -41,8 +41,15 @@ $(document).ready(function () {
         ]
       });
     });
-    let editor = document.querySelector( '#body' )
- 
-    ClassicEditor.create( editor );
-              
+    var quill = new Quill('#editor', {
+      modules: {
+        toolbar: [
+          [{ header: [1, 2, false] }],
+          ['bold', 'italic', 'underline'],
+          ['image', 'code-block']
+        ]
+      },
+      placeholder: 'Compose an epic...',
+      theme: 'snow'  // or 'bubble'
+    });
                 

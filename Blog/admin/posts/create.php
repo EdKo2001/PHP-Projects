@@ -22,6 +22,8 @@ if (!$_SESSION['logon']) {
   <!-- Admin Styling -->
   <link rel="stylesheet" href="../../assets/css/admin.css">
 
+  <link href="//cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+
   <title>Admin - Create Post</title>
 </head>
 
@@ -62,8 +64,10 @@ if (!$_SESSION['logon']) {
           </div>
           <div class="input-group">
             <label>Body</label>
-            <textarea class="text-input" name="description" id="body">
+            <textarea class="text-input" name="description" id="editor">
+            <div id="editor"></div>
             </textarea>
+           
           </div>
           <div class="input-group">
             <label>Preview</label>
@@ -96,7 +100,7 @@ if (!$_SESSION['logon']) {
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
   <!-- CKEditor 5 -->
-  <script src="https://cdn.ckeditor.com/ckeditor5/11.2.0/classic/ckeditor.js"></script>
+  <script src="//cdn.quilljs.com/1.3.6/quill.min.js"></script>
 
   <!-- Custome Scripts -->
   <script src="../../assets/js/scripts.js"></script>

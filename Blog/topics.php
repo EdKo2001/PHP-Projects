@@ -12,7 +12,7 @@
   <!-- Custom Styles -->
   <link rel="stylesheet" href="assets/css/style.css">
 
-  <title>Motivational Blog</title>
+  <title>Awa Inspires Blog</title>
 </head>
 
 <body>
@@ -23,37 +23,13 @@
 
   <!-- Page wrapper -->
   <div class="page-wrapper">
-    <?php
-    require_once('app/database/cofingBD.php');
-    if (isset($_GET['post'])) {
-      $id = $_GET['post'];
-      $sql = $conn->query("SELECT * FROM posts WHERE id='$id'");
-    }
 
-    while ($row = mysqli_fetch_assoc($sql)) {
-      $title = $row['title'];
-      $description = $row['description'];
-    }
-
-
-
-    ?>
     <!-- content -->
     <div class="content clearfix">
-      <div class="page-content single">
-        <h2 style="text-align: center;"><?= $title ?></h2>
-        <br>
-        <?= $description ?>
-
-
-      </div>
-      <!-- signle sidebar-->
-      <?php include('app/includes/single-sidebar.php') ?>
-      <!-- //signle sidebar-->
-
+      <?php include('app/includes/topic.php') ?>
+      <?php include('app/includes/sidebar.php') ?>
     </div>
-  </div>
-  <!-- // content -->
+    <!-- // content -->
 
   </div>
   <!-- // page wrapper -->
