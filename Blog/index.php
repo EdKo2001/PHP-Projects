@@ -1,3 +1,6 @@
+<?php
+  include('path.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,20 +21,20 @@
 <body>
 
   <!-- header -->
-  <?php include('app/includes/header.php') ?>
+  <?php include(ROOT_PATH . '/app/includes/header.php') ?>
   <!-- // header -->
 
   <!-- Page wrapper -->
   <div class="page-wrapper">
 
     <!-- Posts Slider -->
-    <?php include('app/includes/posts-slider.php') ?>
+    <?php include(ROOT_PATH . '/app/includes/posts-slider.php') ?>
     <!-- // Posts Slider -->
 
     <!-- content -->
     <div class="content clearfix">
-      <?php include('app/includes/recent-posts.php') ?>
-      <?php include('app/includes/sidebar.php') ?>
+      <?php include(ROOT_PATH . '/app/includes/recent-posts.php') ?>
+      <?php include(ROOT_PATH . '/app/includes/sidebar.php') ?>
     </div>
     <!-- // content -->
 
@@ -39,7 +42,7 @@
   <!-- // page wrapper -->
 
   <!-- FOOTER -->
-  <?php include('app/includes/footer.php') ?>
+  <?php include(ROOT_PATH . '/app/includes/footer.php') ?>
   <!-- // FOOTER -->
 
 

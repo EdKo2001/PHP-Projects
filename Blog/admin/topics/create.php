@@ -1,8 +1,13 @@
 <?php
-if (!session_id()) session_start();
-if (!$_SESSION['logon']){ 
-    header("Location:../index.php");
-    die();
+session_start();
+if (!$_SESSION['logon']) {
+  header("Location:../index.php");
+  die();
+}
+$now = time(); // Checking the time now when home page starts.
+if ($now > $_SESSION['expire']) {
+  session_destroy();
+  header("Location:../../index.php");
 }
 ?>
 <!DOCTYPE html>
@@ -60,7 +65,7 @@ if (!$_SESSION['logon']){
             <textarea class="text-input" name="description" id="description"></textarea>
           </div>
           <div class="input-group">
-            <button type="submit" name="create" class="btn" >Create Topic</button>
+            <button type="submit" name="create" class="btn">Create Topic</button>
           </div>
         </form>
 
@@ -74,8 +79,8 @@ if (!$_SESSION['logon']){
   <!-- JQuery -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-  <!-- CKEditor 5 -->
-  <script src="https://cdn.ckeditor.com/ckeditor5/11.2.0/classic/ckeditor.js"></script>
+  <!-- Tinymce 5 -->
+  <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
 
   <!-- Custome Scripts -->
   <script src="../../assets/js/scripts.js"></script>

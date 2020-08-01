@@ -1,5 +1,5 @@
 <?php
-if (!session_id()) session_start();
+session_start();
 if ($_SESSION['logon']){ 
     header("Location: topics/index.php");
     die();

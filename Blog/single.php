@@ -1,3 +1,6 @@
+<?php
+  include('path.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,13 +21,13 @@
 <body>
 
   <!-- header -->
-  <?php include('app/includes/header.php') ?>
+  <?php include(ROOT_PATH . '/app/includes/header.php') ?>
   <!-- // header -->
 
   <!-- Page wrapper -->
   <div class="page-wrapper">
     <?php
-    require_once('app/database/cofingBD.php');
+    require_once(ROOT_PATH . '/app/database/cofingBD.php');
     if (isset($_GET['post'])) {
       $id = $_GET['post'];
       $sql = $conn->query("SELECT * FROM posts WHERE id='$id'");
@@ -48,7 +51,7 @@
 
       </div>
       <!-- signle sidebar-->
-      <?php include('app/includes/single-sidebar.php') ?>
+      <?php include(ROOT_PATH . '/app/includes/single-sidebar.php') ?>
       <!-- //signle sidebar-->
 
     </div>
@@ -59,7 +62,7 @@
   <!-- // page wrapper -->
 
   <!-- FOOTER -->
-  <?php include('app/includes/footer.php') ?>
+  <?php include(ROOT_PATH . '/app/includes/footer.php') ?>
   <!-- // FOOTER -->
 
 

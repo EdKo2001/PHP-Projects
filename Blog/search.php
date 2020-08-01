@@ -1,3 +1,6 @@
+<?php
+  include('path.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,7 +21,7 @@
 <body>
 
   <!-- header -->
-  <?php include('app/includes/header.php') ?>
+  <?php include(ROOT_PATH . '/app/includes/header.php') ?>
   <!-- // header -->
 
   <!-- Page wrapper -->
@@ -27,8 +30,8 @@
 
     <!-- content -->
     <div class="content clearfix">
-      <?php include('app/includes/search.php') ?>
-      <?php include('app/includes/sidebar.php') ?>
+      <?php include(ROOT_PATH . '/app/includes/search.php') ?>
+      <?php include(ROOT_PATH . '/app/includes/sidebar.php') ?>
     </div>
     <!-- // content -->
 
@@ -36,7 +39,7 @@
   <!-- // page wrapper -->
 
   <!-- FOOTER -->
-  <?php include('app/includes/footer.php') ?>
+  <?php include(ROOT_PATH . '/app/includes/footer.php') ?>
   <!-- // FOOTER -->
 
 

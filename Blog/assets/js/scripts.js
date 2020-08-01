@@ -41,15 +41,16 @@ $(document).ready(function () {
         ]
       });
     });
-    var quill = new Quill('#editor', {
-      modules: {
-        toolbar: [
-          [{ header: [1, 2, false] }],
-          ['bold', 'italic', 'underline'],
-          ['image', 'code-block']
-        ]
-      },
-      placeholder: 'Compose an epic...',
-      theme: 'snow'  // or 'bubble'
-    });
+    
+tinymce.init({
+  selector: '#editor',
+  height: 300,
+  plugins: [
+    "advlist autolink lists link image charmap print preview anchor",
+    "searchreplace visualblocks code fullscreen",
+    "insertdatetime media table paste imagetools wordcount"
+  ],
+  toolbar: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image",
+  content_css: '//www.tiny.cloud/css/codepen.min.css'
+});
                 

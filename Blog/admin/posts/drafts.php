@@ -1,8 +1,13 @@
 <?php
-if (!session_id()) session_start();
+session_start();
 if (!$_SESSION['logon']) {
   header("Location:../../index.php");
   die();
+}
+$now = time(); // Checking the time now when home page starts.
+if ($now > $_SESSION['expire']) {
+  session_destroy();
+  header("Location:../../index.php");
 }
 ?>
 <!DOCTYPE html>

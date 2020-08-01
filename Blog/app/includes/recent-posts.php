@@ -12,7 +12,7 @@ require_once('app/database/cofingBD.php');
                     <img src="assets/img/'.$row['preview'].'" class="post-image" alt="">
                     <div class="post-content">
           
-                      <h2 class="post-title"><a href="signle.php?post='.$row['id'].'">'.$row['title'].'</a></h2>
+                      <h2 class="post-title"><a href="single.php?post='.$row['id'].'">'.$row['title'].'</a></h2>
           
                       <div class="post-info">
                         <i class="fa fa-user-o"></i> '.$row['author'].'
