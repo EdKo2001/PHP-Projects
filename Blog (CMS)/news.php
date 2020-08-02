@@ -1,3 +1,6 @@
+<?php
+  include('path.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,14 +14,13 @@
 
   <!-- Custom Styles -->
   <link rel="stylesheet" href="assets/css/style.css">
-
   <title>Awa Inspires Blog</title>
 </head>
 
 <body>
 
   <!-- header -->
-  <?php include('app/includes/header.php') ?>
+  <?php include(ROOT_PATH . '/app/includes/header.php') ?>
   <!-- // header -->
 
   <!-- Page wrapper -->
@@ -26,8 +28,8 @@
 
     <!-- content -->
     <div class="content clearfix">
-      <?php include('app/includes/posts.php') ?>
-      <?php include('app/includes/sidebar.php') ?>
+      <?php include(ROOT_PATH . '/app/includes/posts.php') ?>
+      <?php include(ROOT_PATH . '/app/includes/sidebar.php') ?>
     </div>
     <!-- // content -->
 
@@ -35,7 +37,7 @@
   <!-- // page wrapper -->
 
   <!-- FOOTER -->
-  <?php include('app/includes/footer.php') ?>
+  <?php include(ROOT_PATH . '/app/includes/footer.php') ?>
   <!-- // FOOTER -->
 
 

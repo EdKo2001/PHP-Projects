@@ -44,6 +44,7 @@
     <!-- content -->
     <div class="content clearfix">
       <div class="page-content single">
+      
         <h2 style="text-align: center;"><?= $title ?></h2>
         <br>
         <?= $description ?>
